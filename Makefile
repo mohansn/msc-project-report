@@ -10,3 +10,6 @@ main.pdf:main.tex chapters/*
 .PHONY:clean
 clean:
 	@rm -fvr $(OUTPUTS) *~
+.PHONY:rebuild
+rebuild:
+	make clean all
