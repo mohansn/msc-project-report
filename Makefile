@@ -1,7 +1,7 @@
 #!/bin/bash
 OUTPUTS:=main.aux main.log main.pdf main.toc main.out
 all:main.pdf
-main.pdf:main.tex chapters/*
+main.pdf:main.tex chapters/* images/*
 	pdflatex main.tex
 	pdflatex main.tex
 	pdflatex main.tex
