@@ -1,5 +1,5 @@
 #!/bin/bash
-OUTPUTS:=main.aux main.log main.pdf main.toc main.out *.bbl
+OUTPUTS:=main.aux main.log main.pdf main.dvi main.toc main.out *.bbl main.blg
 all:main.pdf
 main.pdf:main.tex chapters/* *.bib
 	pdflatex main.tex
