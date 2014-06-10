@@ -47,7 +47,37 @@ cylinder radius, and cylinder length. Some nanotubes have a property called chir
 an expression of longitudinal twisting.
 
 \subsection {Types and structures}
+Carbon nanotubes are basically sheets of graphite rolled up into a tube as shown in this figure. Hence, the hexagonal two dimensional lattice of graphite is mapped on a one-dimensional cylinder of radius R with various helicities characterized by the rolling vectors (n,m).\cite{types_taner} Nanotubes form different types, which can be described by the chiral vector $(n, m)$, where $n\text{ and }m$ are integers of the vector equation $R = n a_1 + m a_2$. The chiral vector is determined by the diagram at the left. Imagine that the nanotube is unraveled into a planar sheet. Draw two lines (the blue lines) along the tube axis where the separation takes place. In other words, if you cut along the two blue lines and then match their ends together in a cylinder, you get the nanotube that you started with. Now, find any point on one of the blue lines that intersects one of the carbon atoms (point A). Next, draw the Armchair line (the thin yellow line), which travels across each hexagon, separating them into two equal halves. Now that you have the armchair line drawn, find a point along the other tube axis that intersects a carbon atom nearest to the Armchair line (point B). Now connect A and B with our chiral vector, $R$ (red arrow). The wrapping angle $\phi$; (not shown) is formed between $R$ and the Armchair line. If $R$ lies along the Armchair line ($\phi=0^\circ$), then it is called an "\textit{Armchair}" nanotube. If $\phi=30^\circ$, then the tube is of the "\textit{zigzag}" type. Otherwise, if $\phi \ll 30^\circ$ then it is a "\textit{chiral}" tube. The vector $a_1$ lies along the "\textit{zigzag}" line. The other vector $a_2$ has a different magnitude than $a_1$, but its direction is a reflection of $a_1$ over the Armchair line. When added together, they equal the chiral vector $R$.
+The values of $n\text{ and }m$ determine the chirality, or "twist" of the nanotube. The chirality in turn affects the conductance of the nanotube, it's density, it's lattice structure, and other properties. A SWNT is considered metallic if the value $n - m$ is divisible by three. Otherwise, the nanotube is semiconducting. Consequently, when tubes are formed with random values of n and m, we would expect that two-thirds of nanotubes would be semi-conducting, while the other third would be metallic, which happens to be the case.\cite{eqstruct}
+Given the chiral vector (n,m), the diameter of a carbon nanotube can be determined using the relationship\\
+\[d = (n^2 + m^2 + nm)^{1/2} \times 0.0783 nm\]
+\begin{figure}
+\centering
+\includegraphics[scale=1]{typesNT.png}
+\caption{Illustration of rolling vectors (n,m)}
+\label{typesNT}
+\end{figure}
+\begin{figure}
+\includegraphics[scale=1]{n0tube.jpg}
+\caption{(n,0) zigzag nanotube }
+\label{n0tube}
+\end{figure}
+\begin{figure}
+\includegraphics[scale=1]{nntube.jpg}
+\caption{(n,n) armchair nanotube}
+\label{nntube}
+\end{figure}
+\begin{figure}
+\includegraphics[scale=1]{nmtube.png}
+\caption{(n,m) chiral nanotube}
+\label{nmtube}
+\end{figure}
 \subsection {Why study Carbon nanotubes?}
+Carbon nanotubes are molecular-scale tubes of graphitic carbon with outstanding properties. They are among the stiffest and strongest fibres known, and have remarkable electronic properties and many other unique characteristics. For these reasons they have attracted huge academic and industrial interest, with thousands of papers on nanotubes being published every year. Commercial applications have been rather slow to develop, however, primarily because of the high production costs of the best quality nanotubes.
+
+The current huge interest in carbon nanotubes is a direct consequence of the synthesis of buckminsterfullerene, $C_{60}$, and other fullerenes, in 1985. The discovery that carbon could form stable, ordered structures other than graphite and diamond stimulated researchers worldwide to search for other new forms of carbon. The search was given new impetus when it was shown in 1990 that $C_{60}$ could be produced in a simple arc-evaporation apparatus readily available in all laboratories. It was using such an evaporator that the Japanese scientist Sumio Iijima discovered fullerene-related carbon nanotubes in 1991\cite{iijima1991helical}. The tubes contained at least two layers, often many more, and ranged in outer diameter from about 3 nm to 30 nm. They were invariably closed at both ends.
+
+The strength of the $\mathrm{sp^2}$ carbon-carbon bonds gives carbon nanotubes amazing mechanical properties. The stiffness of a material is measured in terms of its Young's modulus, the rate of change of stress with applied strain. The Young's modulus of the best nanotubes can be as high as 1000 GPa which is approximately 5x higher than steel. The tensile strength, or breaking strain of nanotubes can be up to 63 GPa, around 50x higher than steel. These properties, coupled with the lightness of carbon nanotubes, gives them great potential in applications such as aerospace. It has even been suggested that nanotubes could be used in the “space elevator”, an Earth-to-space cable first proposed by Arthur C. Clarke. The electronic properties of carbon nanotubes are also extraordinary. Especially notable is the fact that nanotubes can be metallic or semiconducting depending on their structure. Thus, some nanotubes have conductivities higher than that of copper, while others behave more like silicon. There is great interest in the possibility of constructing nanoscale electronic devices from nanotubes, and some progress is being made in this area. However, in order to construct a useful device we would need to arrange many thousands of nanotubes in a defined pattern, and we do not yet have the degree of control necessary to achieve this. There are several areas of technology where carbon nanotubes are already being used. These include flat-panel displays, scanning probe microscopes and sensing devices. The unique properties of carbon nanotubes will undoubtedly lead to many more applications.\cite{importance}
 \subsection {Why study wave propagation in CNTs?}
 Increasing emphasis of miniature devices have made the scientists to look for newer
 and novel materials which can be handled at the atomistic scales. In this regard,
@@ -60,9 +90,7 @@ various devices at nanoscale, researchers should possess a deep understanding an
 knowledge of mechanical properties of nano-materials and -structures, especially the
 time dependent or dynamic properties.
 
-Nanostructures such as CNTs can propagate waves of the order of terahertz (THz). As dimensions of the ma-
-terial become smaller, however, their resistance to deformation is increasingly deter-
-mined by internal or external discontinuities (such as surfaces, grain boundary, strain
+Nanostructures such as CNTs can propagate waves of the order of terahertz (THz). As dimensions of the material become smaller, however, their resistance to deformation is increasingly determined by internal or external discontinuities (such as surfaces, grain boundary, strain
 gradient, and dislocation). Although many sophisticated approaches for predicting
 the mechanical properties of nanomaterials have been reported, few addressed the
 challenges posed by interior nanostructures such as the surfaces, interfaces, struc-
@@ -93,4 +121,3 @@ nanoscale structures. Since terahertz physics of nanoscale materials and devices
 the main concerns in wave characteristics of CNTs, the small-scale effect must be
 of significance in achieving accurate dispersion relations as the wavelength in the
 frequency domain is in the order of nanometers.
-
