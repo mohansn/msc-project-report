@@ -3,4 +3,6 @@
 *.pdf
 *.toc
 *.out
+*.blg
+*.dvi
 *~
