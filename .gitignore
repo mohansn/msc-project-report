@@ -4,5 +4,6 @@
 *.toc
 *.out
 *.blg
+*.bbl
 *.dvi
 *~
