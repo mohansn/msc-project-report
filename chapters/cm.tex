@@ -5,12 +5,28 @@ Modelling an object as a continuum assumes that the substance of the object comp
 
 Continuum mechanics deals with physical properties of solids and fluids which are independent of any particular coordinate system in which they are observed. These physical properties are then represented by tensors, which are mathematical objects that have the required property of being independent of coordinate system. These tensors can be expressed in coordinate systems for computational convenience.
 
-Materials, such as solids, liquids and gases, are composed of molecules separated by "empty" space. On a microscopic scale, materials have cracks and discontinuities. However, certain physical phenomena can be modeled assuming the materials exist as a continuum, meaning the matter in the body is continuously distributed and fills the entire region of space it occupies. A continuum is a body that can be continually sub-divided into infinitesimal elements with properties being those of the bulk material.
+Materials, such as solids, liquids and gases, are composed of molecules separated by ``empty'' space. On a microscopic scale, materials have cracks and discontinuities. However, certain physical phenomena can be modeled assuming the materials exist as a continuum, meaning the matter in the body is continuously distributed and fills the entire region of space it occupies. A continuum is a body that can be continually sub-divided into infinitesimal elements with properties being those of the bulk material.
 
 The validity of the continuum assumption may be verified by a theoretical analysis, in which either some clear periodicity is identified or statistical homogeneity and ergodicity of the microstructure exists. More specifically, the continuum hypothesis/assumption hinges on the concepts of a representative volume element (RVE) (sometimes called "representative elementary volume") and separation of scales based on the Hill–Mandel condition. This condition provides a link between an experimentalist's and a theoretician's viewpoint on constitutive equations (linear and nonlinear elastic/inelastic or coupled fields) as well as a way of spatial and statistical averaging of the microstructure.\cite{wiki:cm}
 
 Continuum mechanics models begin by assigning a region in three-dimensional Euclidean space to the material body $\mathcal{B}$ being modeled. The points within this region are called particles or material points. Different configurations or states of the body correspond to different regions in Euclidean space. The region corresponding to the body's configuration at time $t$ is labeled $\kappa_t(\mathcal{B})$.
-\includegraphics[scale=0.75]{Continuum_body}\\
+\begin{figure}
+\includegraphics[scale=0.75]{Continuum_body}
+\caption{Configuration of a continuum body}
+\label{continuumbody}
+\end{figure}
+
+A particular particle within the body in a particular configuration is characterized by a position vector\\
+\[\mathbf{x} = \sum_{i=1}^3x_i \mathbf{e}_i\]
+where $\mathbf{e}_i$ are the coordinate vectors in some frame of reference chosen for the problem (see Fig.\ref{continuumbody}. This vector can be expressed as a function of the particle position $\mathbf{X}$ in some reference configuration, for example the configuration at the initial time, so that\\
+\[\mathbf{x}=\kappa_t(\mathbf{X})\]\\
+This function needs to have various properties so that the model makes physical sense. $\kappa_t(\cdot)$ needs to be:\\
+\begin{itemize}
+\item continuous in time, so that the body changes in a way which is realistic,
+\item globally invertible at all times, so that the body cannot intersect itself,
+\item orientation-preserving, as transformations which produce mirror reflections are not possible in nature.
+\end{itemize}
+For the mathematical formulation of the model, $\kappa_t(\cdot)$ is also assumed to be twice continuously differentiable, so that differential equations describing the motion may be formulated.
 
 \section {Non-local mechanics}
 This theory assumes that the stress state at a reference point $\mathbf{x}$ in
@@ -27,13 +43,13 @@ with zero body forces are given by\\
 \sigma_{ij,j}=0
 \end{equation}
 \begin{equation}
-\sigma_{ij}(\mathbf{x})=\int_V \alpha(|\mathbf{x-x'}|,\xi)C_{ijkl}\epsilon_{kl}(\mathbf{x'})dV(\mathbf{x'}),\qquad \forall x \in V \label{eqNL}
+\sigma_{ij}(\mathbf{x})=\int_V \alpha(|\mathbf{x-x'}|,\xi)C_{ijkl}\varepsilon_{kl}(\mathbf{x'})dV(\mathbf{x'}),\qquad \forall x \in V \label{eqNL}
 \end{equation}
 \begin{equation}
-\epsilon_{ij}=\frac{1}{2}(u_{i,j}+u_{j,i})
+\varepsilon_{ij}=\frac{1}{2}(u_{i,j}+u_{j,i})
 \end{equation}
 where $C_{ijkl}$ is the elastic modulus tensor of classical isotropic
-elasticity, $\sigma_{ij}$ and $\epsilon_{ij}$ are stress and strain tensors, respectively,
+elasticity, $\sigma_{ij}$ and $\varepsilon_{ij}$ are stress and strain tensors, respectively,
 and $u_i$ is the displacement vector. $\alpha = \alpha(|\mathbf{x-x'}|,\xi)$ is the nonlocal
 modulus or attenuation function incorporating the nonlocal effects
 into the constitutive equations. This nonlocal modulus is found by
@@ -56,9 +72,9 @@ The generally used kernel function $\alpha(|\mathbf{x-x'}|,\xi)$ used in \ref{eq
 \alpha(|\mathbf{x-x'}|,\xi) = \dfrac{1}{2 \pi \xi^2 l^2} K_0\left(\frac{\bf{x.x}}{\xi l}\right)
 \end{equation}
 where $K_0$ is is the modified Bessel function.
-For two-dimensional nonlocal elasticity, there exists a differential form for the stress–strain relation (from \eqref{eqNL})\cite{eringen1972linear,eringen1976nonlocal,eringen1983differential,eringen1972nonlocal}\\
+For two-dimensional nonlocal elasticity, there exists a differential form for the stress–strain relation (from Eq. \eqref{eqNL})\cite{eringen1972linear,eringen1976nonlocal,eringen1983differential,eringen1972nonlocal}\\
 \begin{equation}
-\left(1-\xi^2 l^2 \nabla^2\right)\sigma_{ij} = C_{ikjl}\epsilon_{kl} \label{NLconsteqn}
+\left(1-\xi^2 l^2 \nabla^2\right)\sigma_{ij} = C_{ikjl}\varepsilon_{kl} \label{NLconsteqn}
 \end{equation}
 where the operator $\nabla^2$ is the Laplacian operator. Notice that in the
 nonlocal elasticity, the effect of small-length scale is considered by
