@@ -1,2 +1,40 @@
 \section {Fundamental Concepts}
-\section {Need for study}
+Wave propagation is any of the ways in which waves travel.
+With respect to the direction of the oscillation relative to the propagation direction, we can distinguish between longitudinal wave and transverse waves.
+For electromagnetic waves, propagation may occur in a vacuum as well as in a material medium. Other wave types cannot propagate through a vacuum and need a transmission medium to exist.\cite{wiki:wp}
+
+\subsection*{Wavenumber and Wave Frequency \cite{mitocwwp}}
+If the range of the spatial corrdinate x is $(-\infty,\infty)$,and all coefficients are independent of $x,t$,  then the first task is to examine the physics
+of sinusoidal wave train of the form:\\
+\[V(x,t) = |A|cos(kx - \omega t - \phi_A)=\mathfrak{R}(A e^{ikx-i\omega t})\]
+where $A = |A| e^{i \phi_A}$ is a complex number with magnitude $|A|\text{ and phase angle} \phi_A$ After
+examining the physical meaning of this special type of waves, it is possible to use the
+principle of superposition to construct more general solutions. It is customary to omit
+the symbol $\mathfrak{R} = $ ``the real part of''  for the sake of brevity, i.e.,\\
+\[V(x,t) = Ae^{ikx-i\omega t}\]
+\emph{Definition}: We shall call:\\
+\begin{center}
+\framebox{$\theta(x,t) = kx - \omega t$}\\
+\end{center}
+the \emph{wave phase}. Clearly the trigonometric function is periodic in phase with the period $2 \pi$. In the $x,t$ plane, $V$ has a constant value along a line of contant phase. In particular, $\theta = 2n \pi$ correspond to the wave crests where $V = |A|$ is the greatest.
+On the other hand, $\theta = (2n+1) \pi (n=1,2,3,\ldots$ correspond to the wave troughs where $V = -|A|$ is the smallest. $|A|$ is half of the separation between adjacent crests
+and troughs and is called the \emph{wave amplitude}; we also call A the complex amplitude. Clearly $\frac{\partial \theta}{\partial x}$ represents the number of phase lines per unit distance, i.e., the density of
+phase lines, at a given instant; it is called the \emph{wave number}.\\
+\begin{center}
+\framebox{$\text{wave number} = k = \frac{\partial \theta}{\partial x}$}
+\end{center}
+On the other hand $-\frac{\partial \theta}{\partial t}$ represensts the number of phase lines passing across a fixed x per unit time; it is called the \emph{wave frequency}.\\
+\begin{center}
+\framebox{$\text{wave frequency} = \omega = \frac{\partial \theta}{\partial t}$}
+\end{center}
+To stay with a particular line of contant phase, say a crest, one must have\\
+\[d\theta = k dx -\omega dt = 0\]
+namely one must move at the \emph{phase velocity},\\
+\begin{center}
+\framebox{$c = \left.\frac{dx}{dt}\right|_{\theta=constant} = \frac{\omega}{k}$}
+\end{center}
+In general a sinusoidal wave whose
+phase velocity depends on the wavelength, i.e.,$\omega$ is a nonlinear function of $k$, is called a \emph{dispersive wave}. We define the \emph{group velocity} as:
+\begin{center}
+\framebox{$\text{group velocity} = c_g = \frac{d\omega}{dt}$}
+\end{center}
