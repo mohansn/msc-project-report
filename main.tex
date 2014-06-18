@@ -10,11 +10,18 @@
 \graphicspath{ {./images/} }
 \usepackage {hyperref}
 \usepackage[numbers,sort&compress]{natbib}
+\usepackage{pdfpages}
 \author{Mohan S Nayaka}
 \title{Wave propagation Studies for Nanostructures}
 \pagestyle{headings}
 \begin{document}
-\maketitle
+\pagestyle{empty}
+\includepdf[pages=-]{1_front_mohan.pdf}
+\includepdf[pages=-]{2_bonafide_Mohan.pdf}
+\includepdf[pages=-]{3_Declaration.pdf}
+\includepdf[pages=-]{4_CSIR_Center_for_Mathematical_Modeling_Mohan.pdf}
+\pagestyle{headings}
+%\maketitle
 \tableofcontents
 \listoffigures
 \chapter* {Abstract}
@@ -31,6 +38,8 @@
 \chapter {Studies conducted}
 \input {chapters/sc01.tex}
 \input {chapters/sc02.tex}
+\chapter{Conclusion}
+\input{chapters/conclusion.tex}
 \bibliographystyle{unsrt}
 \bibliography{refs}
 \end{document}
